@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body, input, button{
+    background-color: #9cfab8;
+    font-family: "Raleway", serif;
+}
+
+main{
+    flex-grow: 1;
+}
+
+h1, h2, h3, h4, h5, h6, button{
+    font-weight: 800;
+}
+
+h1, h2, h3, h4, h5, h6 {      
+    color: #0c5a24;
+}
+
+p{
+    color: #127a31;
+    line-height: 1.5;
+}
+
+a{
+    font-weight: 800;
+    color: #0c5a24;
+    transition: 0.3s;
+
+    &:hover{
+        color: #1e9b44;
+    }
+    &:active{
+        color: #25b952;
+    }
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.6rem;
+}
+
+h3{
+    font-size: 1.3rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+.fa-arrow-right{
+    margin-left: 5px;
+}
+
+.fa-arrow-left{
+    margin-right: 5px;
+}
+
+.fa-magnifying-glass{
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+/* TABLET */
+
+@media screen and (max-width: 1025px) and (min-width: 601px) {
+    h1{
+        font-size: 2.3rem;
+    }
+    
+    h2{
+        font-size: 1.8rem;
+    }
+    
+    h3{
+        font-size: 1.3rem;
+    }
+
+    p{
+        font-size: 1.1rem;
+    }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1026px) {
+    h1{
+        font-size: 2.7rem;
+    }
+    
+    h2{
+        font-size: 2rem;
+    }
+    
+    h3{
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: 1.1rem;
+    }
+}
