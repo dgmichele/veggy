@@ -11,6 +11,7 @@ Una web application per vegetariani che consente agli utenti di cercare ricette 
 - **Navigazione intuitiva**: La navigazione tra le pagine avviene senza refresh completo grazie a React Router, invece se si clicca il logo nell'header per tornare alla home, si ha un refresh dell'homepage.
 - **Gestione dello stato**: Utilizzo di Redux Toolkit per gestire lo stato globale dell’app.
 - **Configurazione API sicura**: Le variabili d'ambiente (come l'URL dell'API e l'API key) sono gestite tramite dotenv.
+- **Stile**: Vengono utilizzati i CSS Modules per una migliore gestione degli stili e soprattutto per evitare conflitti interni nell'app.
 
 ## Tecnologie Utilizzate:
 
@@ -23,10 +24,43 @@ Una web application per vegetariani che consente agli utenti di cercare ricette 
 
 ## Struttura del Progetto:
 
+- **`main.jsx`**
+  Punto di ingresso dell'app React. Configuriamo ReactDOM e colleghiamo il nostro componente principale (`App.jsx`).
+- **`App.jsx`**
+  Configurazione generale dell'app. Qui aggiungiamo React Router e definiamo le rotte principali, come la Home e la pagina dei dettagli della ricetta.
+
+### Redux
+
+- **`redux/store.js`**
+  Configuriamo lo store Redux. È fondamentale impostarlo prima, per gestire lo stato globale.
+- **`redux/slices/recipeSlice.js`**
+  Creiamo lo slice Redux per gestire lo stato delle ricette (es. lista ricette, dettagli di una ricetta, stati di caricamento, errori, ecc... ).
+
+### Servizi (API)
+
+- **`services/api.js`**
+  Scriviamo le funzioni per comunicare con l'API di Spoonacular usando Axios. Qui centralizziamo tutte le chiamate API (usando dotenv).
+
+### Componenti
+
+- **`components/SearchBar.jsx`**
+  Componente per la barra di ricerca. Questo sarà il primo punto di interazione per l'utente per cercare ricette.
+- **`components/RecipeCard.jsx`**
+  Componente per visualizzare una scheda ricetta con immagine e titolo. Lo utilizzeremo per mostrare i risultati della ricerca.
+- **`components/RecipeDetail.jsx`**
+  Componente per visualizzare i dettagli di una ricetta. Questo sarà utilizzato nella pagina dedicata alla singola ricetta.
+
+### Pagine
+
+- **`pages/Home.jsx`**
+  Configuriamo la pagina iniziale con la barra di ricerca e l'elenco dei risultati (usando `RecipeCard`).
+- **`pages/RecipePage.jsx`**
+  Configuriamo la pagina che mostra i dettagli di una ricetta, utilizzando il componente `RecipeDetail`.
+
 ## Installazione e Configurazione:
 
 1. **Clona il repository:**
-   git clone `URL-del-repository`cd `nome-del-repository`
+   git clone `URL-del-repository` cd `nome-del-repository`
 
 2. **Clona il repository:**
    npm install
