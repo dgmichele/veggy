@@ -1,6 +1,6 @@
-# Vegetarian Recipes App:
+# Veggy 🌿
 
-Una web application per vegetariani che consente agli utenti di cercare ricette vegetariane tramite l'API di Spoonacular. L'app mostra un elenco di ricette in formato scheda, permette di visualizzare i dettagli di una ricetta specifica e di caricare ulteriori risultati con un pulsante "Load more".
+Una web app per vegetariani che consente agli utenti di cercare ricette vegetariane tramite l'API di Spoonacular. L'app mostra un elenco di ricette in formato card, permette di visualizzare i dettagli di una ricetta specifica e di caricare ulteriori risultati con un pulsante "Load more".
 
 ## Caratteristiche:
 
@@ -39,7 +39,7 @@ Una web application per vegetariani che consente agli utenti di cercare ricette 
 ### Servizi (API)
 
 - **`services/api.js`**
-  Scriviamo le funzioni per comunicare con l'API di Spoonacular usando Axios. Qui centralizziamo tutte le chiamate API (usando dotenv).
+  Scriviamo le funzioni per comunicare con l'API di Spoonacular usando Axios. Qui centralizziamo le chiamate API per la ricerca delle ricette e per ottenere i dettagli di una ricetta (usando dotenv).
 
 ### Componenti
 
@@ -60,19 +60,19 @@ Una web application per vegetariani che consente agli utenti di cercare ricette 
 ## Installazione e Configurazione:
 
 1. **Clona il repository:**
-   git clone `URL-del-repository` cd `nome-del-repository`
+   `git clone URL-del-repository cd nome-del-repository`
 
 2. **Clona il repository:**
-   npm install
+   `npm install`
 
 3. **Configura le variabili d'ambiente:**
-   Crea un file .env nella root del progetto e aggiungi:
+   Crea un file `.env` nella root del progetto e aggiungi:
 
    - `VITE_API_KEY=la_tua_chiave_api`
    - `VITE_API_URL=https://api.spoonacular.com/recipes/`
 
 4. **Avvia il server di sviluppo:**
-   npm run dev
+   `npm run dev`
 
 ## Utilizzo:
 
