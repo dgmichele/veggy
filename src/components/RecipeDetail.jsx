@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom"; 
 import { getRecipeDetails } from "../services/api";
-import styles from "./RecipeDetail.module.css";
+import styles from "../asset/style/RecipeDetail.module.css";
 
 const RecipeDetail = () => {
   const { id } = useParams(); // Prendiamo l'ID della ricetta dall'URL

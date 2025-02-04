@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./SearchBar.module.css";
+import styles from "../asset/style/SearchBar.module.css";
 
 const SearchBar = ({onSearch}) => {
   const [query, setQuery] = useState(""); // Stato locale per memorizzare il valore dell'input di ricerca

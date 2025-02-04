@@ -1,4 +1,4 @@
-import styles from './Header.module.css';
+import styles from '../asset/style/Header.module.css';
 import logo from '../asset/img/logo.webp';
 
 const Header = () => {

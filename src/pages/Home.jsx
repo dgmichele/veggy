@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom"; // Hook per gestire parametr
 import { fetchRecipes } from "../redux/slices/recipeSlice";
 import SearchBar from "../components/SearchBar";
 import RecipeCard from "../components/RecipeCard";
-import styles from "./Home.module.css";
+import styles from "../asset/style/Home.module.css";
 
 const Home = () => {
   const dispatch = useDispatch();

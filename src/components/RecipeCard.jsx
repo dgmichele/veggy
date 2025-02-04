@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./RecipeCard.module.css";
+import styles from "../asset/style/RecipeCard.module.css";
 
 const RecipeCard = ({ recipe }) => {
   return (
