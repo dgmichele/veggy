@@ -25,37 +25,41 @@ Una web app per vegetariani che consente agli utenti di cercare ricette vegetari
 ## Struttura del Progetto:
 
 - **`main.jsx`**
-  Punto di ingresso dell'app React. Configuriamo ReactDOM e colleghiamo il nostro componente principale (`App.jsx`).
+  Punto di ingresso dell'app React. Si Configura ReactDOM e si collega il componente principale (`App.jsx`).
 - **`App.jsx`**
-  Configurazione generale dell'app. Qui aggiungiamo React Router e definiamo le rotte principali, come la Home e la pagina dei dettagli della ricetta.
+  Configurazione generale dell'app. Qui si aggiunge React Router e si definisono le rotte principali, come la Home e la pagina dei dettagli della ricetta.
 
 ### Redux
 
 - **`redux/store.js`**
-  Configuriamo lo store Redux. È fondamentale impostarlo per gestire lo stato globale.
+  Configurazione dello store Redux. È fondamentale impostarlo per gestire lo stato globale.
 - **`redux/slices/recipeSlice.js`**
-  Creiamo lo slice Redux per gestire lo stato delle ricette (es. lista ricette, dettagli di una ricetta, stati di caricamento, errori, ecc... ).
+  Creazione dello slice Redux per gestire lo stato delle ricette (es. lista ricette, dettagli di una ricetta, stati di caricamento, errori, ecc... ).
 
 ### Servizi (API)
 
 - **`services/api.js`**
-  Scriviamo le funzioni per comunicare con l'API di Spoonacular usando Axios. Qui centralizziamo le chiamate API per la ricerca delle ricette e per ottenere i dettagli di una ricetta (usando dotenv).
+  Qui vi sono le funzioni per comunicare con l'API di Spoonacular usando Axios. Si centralizzano le chiamate API per la ricerca delle ricette e per ottenere i dettagli di una ricetta (usando variabili d’ambiente).
 
 ### Componenti
 
+- **`components/Header.jsx`**
+  Componente che gestisce la testata del sito.
+  - **`components/Footer.jsx`**
+    Componente che gestisce il piè di pagina del sito.
 - **`components/SearchBar.jsx`**
   Componente per la barra di ricerca. Questo sarà il primo punto di interazione per l'utente per cercare ricette.
 - **`components/RecipeCard.jsx`**
-  Componente per visualizzare una card della ricetta con immagine e titolo. Lo utilizzeremo per mostrare i risultati della ricerca.
+  Componente per visualizzare una card della ricetta con immagine e titolo. Verrà utilizzato per mostrare i risultati della ricerca.
 - **`components/RecipeDetail.jsx`**
   Componente per visualizzare i dettagli di una ricetta. Questo sarà utilizzato nella pagina dedicata alla singola ricetta.
 
 ### Pagine
 
 - **`pages/Home.jsx`**
-  Configuriamo la pagina iniziale con la barra di ricerca e l'elenco dei risultati (usando `RecipeCard`).
+  Configurazione della pagina iniziale con la barra di ricerca e l'elenco dei risultati (usando `RecipeCard`).
 - **`pages/RecipePage.jsx`**
-  Configuriamo la pagina che mostra i dettagli di una ricetta, utilizzando il componente `RecipeDetail`.
+  Configurazione della pagina che mostra i dettagli di una ricetta, utilizzando il componente `RecipeDetail`.
 
 ## Installazione e Configurazione:
 
