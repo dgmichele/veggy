@@ -9,14 +9,14 @@ const api = axios.create({
   params: {
     apiKey: API_KEY,
     diet: 'vegetarian',
-    number: 24,
+    number: 24, // massimo numero di ricette da visualizzare
   },
 });
 
 export const searchRecipes = async (query) => {
   try {
     const response = await api.get('/complexSearch', {
-      params: { query },
+      params: { query }, // axios aggiunge il parametro "query" all'URL
     });
     return response.data.results;
   } catch (error) {

@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom"; // Hook per gestire i parametri URL e gestire la visibilità degli elementi caricati
+import { useSearchParams } from "react-router-dom"; // Hook per gestire parametri URL e gestire la visibilità degli elementi caricati
 import { fetchRecipes } from "../redux/slices/recipeSlice";
 import SearchBar from "../components/SearchBar";
 import RecipeCard from "../components/RecipeCard";

@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'; // createAsyncThunk ci permette di gestire le azioni asincrone
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'; // createAsyncThunk ci permette di gestire azioni asincrone
 import { searchRecipes } from "../../services/api";
 
 export const fetchRecipes = createAsyncThunk(
