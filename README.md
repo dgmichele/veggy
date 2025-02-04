@@ -32,7 +32,7 @@ Una web application per vegetariani che consente agli utenti di cercare ricette 
 ### Redux
 
 - **`redux/store.js`**
-  Configuriamo lo store Redux. È fondamentale impostarlo prima, per gestire lo stato globale.
+  Configuriamo lo store Redux. È fondamentale impostarlo per gestire lo stato globale.
 - **`redux/slices/recipeSlice.js`**
   Creiamo lo slice Redux per gestire lo stato delle ricette (es. lista ricette, dettagli di una ricetta, stati di caricamento, errori, ecc... ).
 
