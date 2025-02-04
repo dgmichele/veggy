@@ -79,3 +79,7 @@ Una web app per vegetariani che consente agli utenti di cercare ricette vegetari
 - **Ricerca**: Usa la barra di ricerca per trovare ricette vegetariane. Quando una ricerca è attiva, il titolo della sezione diventa "Results:"; altrimenti rimane "Our best recipes:".
 - **Dettagli Ricetta**: Clicca su una scheda ricetta per visualizzare i dettagli.
 - **Load More**: Durante una ricerca, il pulsante "Load more" ti consente di visualizzare ulteriori risultati.
+
+## Test:
+
+Per testare l'app, vai qui https://your-veggy.netlify.app/ 🔗
