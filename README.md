@@ -82,4 +82,4 @@ Una web app per vegetariani che consente agli utenti di cercare ricette vegetari
 
 ## Test:
 
-Per testare l'app, vai qui https://your-veggy.netlify.app/ 🔗
+Per testare l'app, vai qui ➡️ https://your-veggy.netlify.app/
