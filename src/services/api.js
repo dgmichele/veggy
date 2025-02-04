@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL;
-const API_KEY = import.meta.env.VITE_API_KEY; 
+// const API_URL = import.meta.env.VITE_API_URL;
+// const API_KEY = import.meta.env.VITE_API_KEY; 
 
 const api = axios.create({
-  baseURL: API_URL, 
+  baseURL: 'https://api.spoonacular.com/recipes/', 
   params: {
-    apiKey: API_KEY,
+    apiKey: '7917b03328fa448898672b6e00791541',
     diet: 'vegetarian',
     number: 24,
   },
