@@ -1,9 +1,9 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'; // createAsyncThunk ci permette di gestire le azioni asincrone
 import { searchRecipes } from "../../services/api";
 
 export const fetchRecipes = createAsyncThunk(
-  "recipe/fetchRecipes",
-  async (query, thunkAPI) => {
+  "recipe/fetchRecipes", 
+  async (query, thunkAPI) => { // thunkAPI ci serve per gestire eventuali errori
     try {
       const response = await searchRecipes(query);
       return { query, recipes: response }; // Ritorniamo anche la query
@@ -17,11 +17,11 @@ const recipeSlice = createSlice({
   name: 'recipe',
   initialState: {
     recipes: [], 
-    status: 'idle',
+    status: 'idle', // idle | loading | succeeded | failed
     error: null, 
   },
-  reducers: {},
-  extraReducers: (builder) => {
+  reducers: {}, // azioni sincrone
+  extraReducers: (builder) => { // azioni asincrone (come fetchRecipes)
     builder
       .addCase(fetchRecipes.pending, (state) => {
         state.status = 'loading'; 

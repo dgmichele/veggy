@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom"; 
+import { useSearchParams } from "react-router-dom"; // Hook per gestire i parametri URL e gestire la visibilità degli elementi caricati
 import { fetchRecipes } from "../redux/slices/recipeSlice";
 import SearchBar from "../components/SearchBar";
 import RecipeCard from "../components/RecipeCard";
@@ -45,8 +45,10 @@ const Home = () => {
       <SearchBar onSearch={handleSearch} />
 
       <div className={styles.resultsContainer}>
+        {/* Mostra il titolo solo se non siamo in fase di caricamento o errore */}
         {status !== "loading" && status !== "failed" && (
           <h2 className={styles.resultsTitle}>
+            {/* Mostra i "Results" solo nei risultati di ricerca */}
             {searchQuery ? "Results:" : "Our best recipes:"}
           </h2>
         )}
@@ -70,6 +72,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Mostra il pulsante solo nei risultati di ricerca e se ci sono ricette da caricare */}
       {searchQuery && visibleRecipes < recipes.length && (
         <div className={styles.loadMoreContainer}> 
             <button className={styles.loadMoreButton} onClick={loadMoreRecipes}>
