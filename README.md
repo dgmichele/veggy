@@ -8,7 +8,7 @@ Una web application per vegetariani che consente agli utenti di cercare ricette 
 - **Visualizzazione schede ricetta**: Ogni ricetta viene presentata con immagine e titolo.
 - **Dettagli ricetta**: Cliccando su una ricetta, l'utente può visualizzare informazioni dettagliate.
 - **Caricamento dinamico**: Un pulsante "Load more" permette di caricare ulteriori ricette (disponibile solo durante una ricerca).
-- **Navigazione intuitiva**: La navigazione tra le pagine avviene senza refresh completo grazie a React Router, con opzioni per forzare un refresh completo se necessario.
+- **Navigazione intuitiva**: La navigazione tra le pagine avviene senza refresh completo grazie a React Router, invece se si clicca il logo nell'header per tornare alla home, si ha un refresh dell'homepage.
 - **Gestione dello stato**: Utilizzo di Redux Toolkit per gestire lo stato globale dell’app.
 - **Configurazione API sicura**: Le variabili d'ambiente (come l'URL dell'API e l'API key) sono gestite tramite dotenv.
 
@@ -26,16 +26,16 @@ Una web application per vegetariani che consente agli utenti di cercare ricette 
 ## Installazione e Configurazione:
 
 1. **Clona il repository:**
-   git clone <URL-del-repository>
-   cd <nome-del-repository>
+   git clone `URL-del-repository`cd `nome-del-repository`
 
 2. **Clona il repository:**
    npm install
 
 3. **Configura le variabili d'ambiente:**
    Crea un file .env nella root del progetto e aggiungi:
-   VITE_API_KEY=la_tua_chiave_api
-   VITE_API_URL=https://api.spoonacular.com/recipes/
+
+   - `VITE_API_KEY=la_tua_chiave_api`
+   - `VITE_API_URL=https://api.spoonacular.com/recipes/`
 
 4. **Avvia il server di sviluppo:**
    npm run dev
