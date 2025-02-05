@@ -5,7 +5,7 @@ import styles from "../asset/style/RecipeDetail.module.css";
 
 const RecipeDetail = () => {
   const { id } = useParams(); // Prendiamo l'ID della ricetta dall'URL
-  const navigate = useNavigate(); 
+  const navigate = useNavigate(); // utile per il pulsante "Back to recipes"
 
   const [recipe, setRecipe] = useState(null); // Stato per i dettagli della ricetta
   const [loading, setLoading] = useState(true); // Stato di caricamento
