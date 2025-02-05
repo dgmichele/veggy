@@ -49,7 +49,7 @@ const Home = () => {
         {status !== "loading" && status !== "failed" && (
           <h2 className={styles.resultsTitle}>
             {/* Mostra i "Results" solo nei risultati di ricerca */}
-            {searchQuery ? "Results:" : "Our best recipes:"}
+            {searchQuery ? `Results for "${searchQuery}"` : "Our best recipes:"}
           </h2>
         )}
       </div>
