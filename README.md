@@ -45,8 +45,8 @@ Una web app per vegetariani che consente agli utenti di cercare ricette vegetari
 
 - **`components/Header.jsx`**
   Componente che gestisce la testata del sito.
-  - **`components/Footer.jsx`**
-    Componente che gestisce il piè di pagina del sito.
+- **`components/Footer.jsx`**
+  Componente che gestisce il piè di pagina del sito.
 - **`components/SearchBar.jsx`**
   Componente per la barra di ricerca. Questo sarà il primo punto di interazione per l'utente per cercare ricette.
 - **`components/RecipeCard.jsx`**
