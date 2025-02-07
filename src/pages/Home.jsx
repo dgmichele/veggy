@@ -11,7 +11,7 @@ const Home = () => {
   const { recipes, status, error } = useSelector((state) => state.recipe);
   
   const [searchParams, setSearchParams] = useSearchParams(); // Gestiamo i parametri URL
-  const searchQuery = searchParams.get("query") || ""; 
+  const searchQuery = searchParams.get("query") || ""; // estraiamo la query dall'URL (usa "" se non la query non è presente)
   const initialVisible = parseInt(searchParams.get("visible") || "6", 10); // Recuperiamo visibleRecipes dall'URL
   
   const [visibleRecipes, setVisibleRecipes] = useState(initialVisible); // Usiamo il valore recuperato
