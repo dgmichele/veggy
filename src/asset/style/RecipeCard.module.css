@@ -2,6 +2,11 @@
     border: 3px solid #0c5a24;
     border-radius: 15px;
     background-color: #ebfff1;
+    text-decoration: none;
+
+    &:hover{
+        transform: scale(1.01);
+    }
 }
 
 .recipeImage{
@@ -21,10 +26,12 @@
 
 .openRecipe{
     display: inline-block;
+    cursor: pointer;
     text-decoration: none;
     color: #0c5a24;
     border: #0c5a24 3px solid;
     background-color: transparent;
+    font-size: 16px;
     font-weight: 800;
     transition: 0.3s;
     padding: 10px 25px;

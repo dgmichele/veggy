@@ -62,9 +62,10 @@ const Home = () => {
       <section className={styles.homeContainer}>
         <div className={styles.homeInner}>
           {recipes.length > 0 ? (
-            recipes.slice(0, visibleRecipes)
-              .map((recipe) => (
-                <RecipeCard key={recipe.id} recipe={recipe} />
+            recipes
+            .slice(0, visibleRecipes)
+            .map((recipe) => (
+              <RecipeCard key={recipe.id} recipe={recipe} />
               ))
           ) : (
             status === "succeeded" && <p className={styles.noResults}>🥲 No recipes found!</p>
