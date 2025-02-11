@@ -1,89 +1,84 @@
 # Veggy 🌿
 
-Una web app per vegetariani che consente agli utenti di cercare ricette vegetariane tramite l'API di Spoonacular. L'app mostra un elenco di ricette in formato card, permette di visualizzare i dettagli di una ricetta specifica e di caricare ulteriori risultati con un pulsante "Load more".
+A web app for vegetarians that allows users to search for vegetarian recipes using the Spoonacular API. The app displays a list of recipes in card format, allows users to view details of a specific recipe, and upload additional results with a “Load more” button.
 
-## Caratteristiche:
+## Features:
 
-- **Ricerca ricette**: L'utente può cercare ricette vegetariane utilizzando una barra di ricerca.
-- **Visualizzazione schede ricetta**: Ogni ricetta viene presentata con immagine e titolo.
-- **Dettagli ricetta**: Cliccando su una ricetta, l'utente può visualizzare informazioni dettagliate.
-- **Caricamento dinamico**: Un pulsante "Load more" permette di caricare ulteriori ricette (disponibile solo durante una ricerca).
-- **Navigazione intuitiva**: La navigazione tra le pagine avviene senza refresh completo grazie a React Router, invece se si clicca il logo nell'header per tornare alla home, si ha un refresh dell'homepage.
-- **Gestione dello stato**: Utilizzo di Redux Toolkit per gestire lo stato globale dell’app.
-- **Configurazione API sicura**: Le variabili d'ambiente (come l'URL dell'API e l'API key) sono gestite tramite dotenv.
-- **Stile**: Vengono utilizzati i CSS Modules per una migliore gestione degli stili e soprattutto per evitare conflitti interni nell'app.
+- **Recipe search**: Users can search for vegetarian recipes using a search bar.
+- **Recipe tab display**: Each recipe is presented with an image and title.
+- **Recipe details**: By clicking on a recipe, the user can view detailed information.
+- **Dynamic loading**: A “Load more” button allows users to load additional recipes (available only during a search).
+- **Intuitive navigation**: Navigation between pages occurs without a full refresh thanks to React Router, instead if you click the logo in the header to return to the home page, you have a refresh of the homepage.
+- **State management**: Using Redux Toolkit to manage the global state of the app.
+- **Secure API configuration**: Environment variables (such as API URL and API key) are managed via dotenv.
+- **Style**: CSS Modules are used for better management of styles and especially to avoid internal conflicts in the app.
 
-## Tecnologie Utilizzate:
+## Technologies Used:
 
-- **React**: Libreria per la creazione dell'interfaccia utente.
-- **React Router**: Per la navigazione tra le pagine.
-- **Redux Toolkit**: Per la gestione dello stato globale.
-- **Axios**: Per le chiamate API.
-- **Vite**: Per il bundling e lo sviluppo dell'applicazione.
-- **Dotenv**: Per gestire le variabili d'ambiente (API key e API URL).
+- **React**: Library for creating the user interface.
+- **React Router**: For navigation between pages.
+- **Redux Toolkit**: For global state management.
+- **Axios**: For API calls.
+- **Vite**: For bundling and application development.
+- **Dotenv**: For managing environment variables (API key and API URL).
 
-## Struttura del Progetto:
+## Project Structure:
 
-- **`main.jsx`**
-  Punto di ingresso dell'app React. Si Configura ReactDOM e si collega il componente principale (`App.jsx`).
+- **`main.jsx`**.
+  React app entry point. You configure ReactDOM and connect the main component (`App.jsx`).
 - **`App.jsx`**
-  Configurazione generale dell'app. Qui si aggiunge React Router e si definisono le rotte principali, come la Home e la pagina dei dettagli della ricetta.
+  General configuration of the app. Here you add React Router and define the main routes, such as the Home and the recipe details page.
 
-### Redux
-
-- **`redux/store.js`**
-  Configurazione dello store Redux. È fondamentale impostarlo per gestire lo stato globale.
-- **`redux/slices/recipeSlice.js`**
-  Creazione dello slice Redux per gestire lo stato delle ricette (es. lista ricette, dettagli di una ricetta, stati di caricamento, errori, ecc... ).
-
-### Servizi (API)
+### Services (API).
 
 - **`services/api.js`**
-  Qui vi sono le funzioni per comunicare con l'API di Spoonacular usando Axios. Si centralizzano le chiamate API per la ricerca delle ricette e per ottenere i dettagli di una ricetta (usando variabili d’ambiente).
+  Here are the functions for communicating with the Spoonacular API using Axios. You centralize API calls to search for recipes and to get the details of a recipe (using environment variables and React Query with its custom hooks).
 
-### Componenti
+### Components.
 
 - **`components/Header.jsx`**
-  Componente che gestisce la testata del sito.
+  Component that manages the header of the site.
 - **`components/Footer.jsx`**
-  Componente che gestisce il piè di pagina del sito.
+  Component that manages the site footer.
 - **`components/SearchBar.jsx`**
-  Componente per la barra di ricerca. Questo sarà il primo punto di interazione per l'utente per cercare ricette.
+  Component for the search bar. This will be the first point of interaction for the user to search for recipes.
 - **`components/RecipeCard.jsx`**
-  Componente per visualizzare una card della ricetta con immagine e titolo. Verrà utilizzato per mostrare i risultati della ricerca.
+  Component to display a recipe card with image and title. It will be used to display search results.
 - **`components/RecipeDetail.jsx`**
-  Componente per visualizzare i dettagli di una ricetta. Questo sarà utilizzato nella pagina dedicata alla singola ricetta.
+  Component to display the details of a recipe. This will be used on the page dedicated to the individual recipe.
 
-### Pagine
+### Pages
 
 - **`pages/Home.jsx`**
-  Configurazione della pagina iniziale con la barra di ricerca e l'elenco dei risultati (usando `RecipeCard`).
+  Home page configuration with search bar and list of results (using `RecipeCard`).
 - **`pages/RecipePage.jsx`**
-  Configurazione della pagina che mostra i dettagli di una ricetta, utilizzando il componente `RecipeDetail`.
+  Configuration of the page showing the details of a recipe, using the `RecipeDetail` component.
 
-## Installazione e Configurazione:
+## Installation and Configuration:
 
-1. **Clona il repository:**
-   `git clone URL-del-repository cd nome-del-repository`
+1. **Clone the repository:**
+   `git clone URL-of-repository cd name-of-repository`.
 
-2. **Clona il repository:**
+2. **Clone the repository:**
    `npm install`
 
-3. **Configura le variabili d'ambiente:**
-   Crea un file `.env` nella root del progetto e aggiungi:
+3. **Configure environment variables:**
+   Create an `.env` file in the root of the project and add:
 
-   - `VITE_API_KEY=la_tua_chiave_api`
+   - `VITE_API_KEY=your_api_key`.
    - `VITE_API_URL=https://api.spoonacular.com/recipes/`
 
-4. **Avvia il server di sviluppo:**
+4. **Start the development server:**
    `npm run dev`
 
-## Utilizzo:
+## Usage:
 
-- **Ricerca**: Usa la barra di ricerca per trovare ricette vegetariane. Quando una ricerca è attiva, il titolo della sezione diventa "Results:"; altrimenti rimane "Our best recipes:".
-- **Dettagli Ricetta**: Clicca su una scheda ricetta per visualizzare i dettagli.
-- **Load More**: Durante una ricerca, il pulsante "Load more" ti consente di visualizzare ulteriori risultati.
+- **Search**: Use the search bar to find vegetarian recipes. When a search is active, the section title becomes “Results:”; otherwise it remains “Our best recipes:”
+- **Recipe Details**: Click on a recipe card to view details.
+- **Load More**: During a search, the “Load more” button allows you to view additional results.
 
 ## Test:
 
-Per testare l'app, vai qui ➡️ https://your-veggy.netlify.app/
+To test the app, go here ➡️ https://your-veggy.netlify.app/
+
+Translated with DeepL.com (free version)
