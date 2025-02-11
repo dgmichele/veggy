@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom"; // Hook per gestire parametri URL e gestire la visibilità degli elementi caricati
 import { fetchRecipes } from "../redux/slices/recipeSlice";
+import { Helmet } from "react-helmet-async";
 import SearchBar from "../components/SearchBar";
 import RecipeCard from "../components/RecipeCard";
 import styles from "../asset/style/Home.module.css";
@@ -36,6 +37,14 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          {searchQuery
+            ? `Results for "${searchQuery} - Veggy"`
+            : "Veggy"}
+        </title>
+      </Helmet>
+
       <div className={styles.titleContainer}>
         <div className={styles.titleInner}>
           <h1 className={styles.title}>Find your favourite vegetarian recipe</h1>

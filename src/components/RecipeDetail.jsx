@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom"; 
 import { getRecipeDetails } from "../services/api";
+import { Helmet } from "react-helmet-async";
 import styles from "../asset/style/RecipeDetail.module.css";
 
 const RecipeDetail = () => {
@@ -30,6 +31,11 @@ const RecipeDetail = () => {
   if (error) return <p className={styles.error}>{error}</p>;
 
   return (
+    <>
+    <Helmet>
+        <title>{recipe ? `${recipe.title} - Veggy` : "Loading Recipe..."}</title>
+    </Helmet>
+
     <div className={styles.recipeDetailContainer}>
       <h1 className={styles.title}>{recipe.title}</h1>
       <img src={recipe.image} alt={recipe.title} className={styles.recipeImage}/>
@@ -39,6 +45,7 @@ const RecipeDetail = () => {
       Back to recipes
       </button>
     </div>
+    </>
   );
 };
 
