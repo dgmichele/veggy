@@ -80,5 +80,3 @@ A web app for vegetarians that allows users to search for vegetarian recipes usi
 ## Test:
 
 To test the app, go here ➡️ https://your-veggy.netlify.app/
-
-Translated with DeepL.com (free version)
