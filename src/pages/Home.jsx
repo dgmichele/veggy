@@ -40,7 +40,7 @@ const Home = () => {
       <Helmet>
         <title>
           {searchQuery
-            ? `Results for "${searchQuery} - Veggy"`
+            ? `Results for "${searchQuery}" - Veggy`
             : "Veggy"}
         </title>
       </Helmet>
