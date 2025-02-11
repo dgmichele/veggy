@@ -29,12 +29,12 @@ A web app for vegetarians that allows users to search for vegetarian recipes usi
 - **`App.jsx`**
   General configuration of the app. Here you add React Router and define the main routes, such as the Home and the recipe details page.
 
-### Services (API).
+### Services (API)
 
 - **`services/api.js`**
   Here are the functions for communicating with the Spoonacular API using Axios. You centralize API calls to search for recipes and to get the details of a recipe (using environment variables and React Query with its custom hooks).
 
-### Components.
+### Components
 
 - **`components/Header.jsx`**
   Component that manages the header of the site.
