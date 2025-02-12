@@ -9,7 +9,7 @@ import styles from "../asset/style/Home.module.css";
 const Home = () => {
   const [searchParams, setSearchParams] = useSearchParams(); // Gestiamo i parametri URL
   const searchQuery = searchParams.get("query") || ""; // estraiamo la query dall'URL (usa "" se non la query non è presente)
-  const initialVisible = parseInt(searchParams.get("visible") || "6", 10); // Recuperiamo visibleRecipes dall'URL
+  const initialVisible = parseInt(searchParams.get("visible") || "6", 10); // estraiamo le card visibili dall'URL (usa "6" se visible non è presente)
   const [visibleRecipes, setVisibleRecipes] = useState(initialVisible); // Usiamo il valore recuperato
   const { data: recipes = [], isLoading, isError, error } = useSearchRecipes(searchQuery); // Gestione chiamata API con React Query
 
@@ -20,7 +20,7 @@ const Home = () => {
 
   // button load more
   const loadMoreRecipes = () => {
-    const newVisible = visibleRecipes + 6;
+    const newVisible = visibleRecipes + 6; 
     setSearchParams({ query: searchQuery, visible: newVisible });
     setVisibleRecipes(newVisible);
   };
